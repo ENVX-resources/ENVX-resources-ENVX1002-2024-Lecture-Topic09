@@ -1,5 +1,5 @@
 ---
-title: Topic 9 -- Linear functions
+title: Topic 9 -- Describing relationships
 subtitle: ENVX1002 Introduction to Statistical Methods
 author: Januar Harianto
 institute: The University of Sydney
