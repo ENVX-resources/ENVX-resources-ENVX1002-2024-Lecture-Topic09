@@ -8,7 +8,7 @@ date-format: "MMM YYYY" # see https://momentjs.com/docs/#/displaying/format/
 execute: 
   eval: true
   echo: true
-self-contained: false # false for quick rendering, true for final version
+self-contained: false # set to true to render single HTML file (for Canvas)
 ---
 
 # Quick intro
@@ -90,7 +90,7 @@ ggplot(Galton, aes(x = parent, y = child)) +
     - negative - one variable increases as the other decreases
   - **Strength**: weak, moderate, strong -- *subjective*, but useful for *describing* the relationship
 
-. . .
+---
 
 ```{r}
 #| code-fold: true
@@ -135,17 +135,16 @@ p1 + p2
 ```
 
 
-## What can correlation analysis be used for? {auto-animate="true"}
+## What can correlation analysis be used for?
 
 - **Describing** the *possible* linear relationship between two variables
-- Used *extensively* in exploratory data analysis: because it is *fast* and *easy* to calculate
+- Used *extensively* in exploratory data analysis: because it is *fast* and *easy* to calculate.
 
-E.g. what is the correlation between all continuous variables in the `iris` dataset?
+---
 
-## What can correlation analysis be used for? {auto-animate="true"}
+### E.g. what is the correlation between all continuous variables in the `iris` dataset?
 
-E.g. what is the correlation between all continuous variables in the `iris` dataset?
-
+::: {.fragment}
 :::: {.columns}
 ::: {.column width="50%"}
 
@@ -164,6 +163,7 @@ plot(iris[, -5])
 ::::
 
 - We can essentially use correlation analysis to *identify* variables that are useful for *predicting* another variable, or if they will present issues for *model fitting* i.e. multicollinearity.
+:::
 
 ## Different types of correlation coeefficients
 
@@ -287,11 +287,9 @@ ggplot(datasaurus_dozen, aes(x = x, y = y)) +
 
 *All of these data have a correlation coefficient close to zero!*
 
-## Correlation $\neq$ causation
+# Correlation $\neq$ causation
 
-### [Spurious correlations](https://www.tylervigen.com/spurious-correlations)
-
-- a relationship between two variables does not imply that one causes the other
+[Spurious correlations](https://www.tylervigen.com/spurious-correlations): a relationship between two variables does not imply that one causes the other.
 
 ![](images/cell_phones.png)
 
