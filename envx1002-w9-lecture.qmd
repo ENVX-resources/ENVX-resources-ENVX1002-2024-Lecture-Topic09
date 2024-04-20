@@ -1,7 +1,7 @@
 ---
 title: Topic 9 -- Describing relationships
 subtitle: ENVX1002 Introduction to Statistical Methods
-author: Januar Harianto
+author: Liana Pozza
 institute: The University of Sydney
 date: last-modified # today | last-modified
 date-format: "MMM YYYY" # see https://momentjs.com/docs/#/displaying/format/
@@ -15,22 +15,78 @@ self-contained: false # set to true to render single HTML file (for Canvas)
 
 ## About me
 
-- Januar Harianto, [Data Scientist and Lecturer](https://www.linkedin.com/in/januarharianto/)
+::: {layout-ncol=2}
+- Lecturer in Agricultural Data Science
+- Spatial modelling and mapping, Soil science, Precision Agriculture
+- This year back to being a student again, GradCert (Higher Education)
 
-. . .
+![Narrabri cotton field](images/Pozza_natural_habitat.jpg)
+:::
 
-- Temporarily teaching this course for [Dr. Liana Pozza](https://www.sydney.edu.au/science/about/our-people/academic-staff/liana-pozza.html)
-- Except for lecture slides, all other content remains the same
 
-. . .
+## Learning Outcomes
 
-- I try to keep things the same but added some of my own flavour...
-- Original slides by Liana are still available on Canvas
+- LO1. Demonstrate proficiency in utilizing R and Excel to effectively explore and describe data sets in the life sciences.
+
+- LO2. Evaluate and interpret different types of data in the natural sciences by visualising probability distributions and calculating probabilities using RStudio and Excel.
+
+- LO3. Apply parametric and non-parametric statistical inference methods to experimental data using RStudio and effectively interpret and communicate the results in the context of the data.
+
+- LO4. Apply both linear and non-linear models to describe relationships between variables using RStudio and Excel, demonstrating creativity in developing models that effectively represent complex data patterns.
+
+- LO5. Articulate statistical and modelling results clearly and convincingly in both written reports and oral presentations, working effectively as an individual and collaboratively in a team, showcasing the ability to convey complex information to varied audiences.
+
+
+
+
+## Learning Outcomes
+
+- LO1. Demonstrate proficiency in utilizing R and Excel to effectively explore and describe data sets in the life sciences.
+
+- [LO2. Evaluate and interpret different types of data in the natural sciences by visualising probability distributions and calculating probabilities using RStudio and Excel.]{style="color: #D0D3D4;"}
+
+- [LO3. Apply parametric and non-parametric statistical inference methods to experimental data using RStudio and effectively interpret and communicate the results in the context of the data.]{style="color:#D0D3D4;"}
+
+- LO4. Apply both linear and non-linear models to describe relationships between variables using RStudio and Excel, demonstrating creativity in developing models that effectively represent complex data patterns.
+
+- [LO5. Articulate statistical and modelling results clearly and convincingly]{style="color:black;"} [in both written reports and oral presentations, working effectively as an individual and collaboratively in a team, showcasing the ability to convey complex information to varied audiences.]{style="color:#D0D3D4;"}
+
+<!---
+therefore, want students how to fit a regression model and be able to interpret 
+- Want to make sure we are using it for the right thing (linear relationship)
+- want to make sure we are fitting it properly
+- Want to then be able to interpret the output
+--->
+
+## Module overview
+
+- **Week 9. Describing relationships**
+    + Correlation &rarr; calculation, interpretation, things to watch out for
+    + Regression &rarr; Why do we care? model structure, model fitting
+  
+- **Week 10. Linear functions**
+    + Is the model worth fitting? &rarr; Assumptions, hypothesis testing
+    + How good is the model? &rarr; Measures of model fit
+  
+- **Week 11. Linear functions - multiple predictors** 
+    + Parsimonious models
+    + Introduction to Multiple Linear Regression (MLR) modelling
+    + Assumptions and interpretation
+
+- **Week 12. Nonlinear functions**
+    + Common nonlinear functions
+    + Transformations
+    + Performing nonlinear regression
+
+## Module overview
+
+- **Week 9. Describing relationships**
+    + Correlation &rarr; calculation, interpretation, things to watch out for
+    + Regression &rarr; Why do we care? model structure, model fitting
+
 
 
 # Brief history
-
-
 
 ![Adrien-Marie Legendre](images/legendre.jpg)
 ![Carl Friedrich Gauss](images/gauss.jpg)
@@ -436,20 +492,18 @@ ggplot(data.frame(x = x, y = y), aes(x, y)) +
 ```
 
 
-## *More* examples
-
-Climate change modelling
+## Example: climate change modelling
 
 ![](images/anomalies.png)
 
-[Source](https://science2017.globalchange.gov/chapter/4/)
+[Source: https://science2017.globalchange.gov/chapter/4/](https://science2017.globalchange.gov/chapter/4/)
 
----
 
-COVID-19 transmission modelling
+## Example: COVID-19 transmission modelling
 
-![](images/covid.jpg)
-[Source](https://www.nature.com/articles/s41598-021-84893-4/figures/1)
+![](images/covid.jpg){width=75%}
+
+[Source: https://www.nature.com/articles/s41598-021-84893-4/figures/1](https://www.nature.com/articles/s41598-021-84893-4/figures/1)
 
 
 
@@ -517,6 +571,11 @@ $$\epsilon_i \sim N(0, \sigma^2)$$
 [We tend to associate $\epsilon_i$ with the **residual**, which is a positive or negative difference from the "predicted" response, rather than error itself which is a difference from the **true** response]{style="color: red;"}
 :::
 
+## In pictures...
+
+![](images/SLR_plot_description.png)
+
+
 ## Interpreting the relationship {auto-animate="true"}
 
 $$Y_i = \color{royalblue}{\beta_0 + \beta_1 x_i} +\color{red}{\epsilon_i}$$
@@ -535,6 +594,7 @@ $$Y_i = \color{royalblue}{\beta_0 + \beta_1 x_i} +\color{red}{\epsilon_i}$$
 
 - Y = f(x)
 - Dependent variable = f(Independent variable)
+
 
 ## The variation in the response
 
@@ -584,6 +644,7 @@ $$\color{firebrick}{argmin_{\beta_0, \beta_1}} \sum_{i=1}^n (y_i - \color{royalb
 ![[source](https://github.com/Enchufa2/ls-springs)](images/leastsquares.gif){fig-align="center"} -->
   
 # Inference: back to Galton's data
+
 What can we understand about the relationship between `child` and `parent`?
 
 ## Hypothesis testing
