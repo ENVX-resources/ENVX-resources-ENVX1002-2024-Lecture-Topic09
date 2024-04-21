@@ -600,6 +600,15 @@ $$Y_i = \color{royalblue}{\beta_0 + \beta_1 x_i} +\color{red}{\epsilon_i}$$
 
 ![](images/residual.jpg)
 
+## Model fitting
+
+Two approaches; analytical and numerical: 
+
+Analytical:  equation(s) used directly to find solution, e.g. estimate parameters that minimise residual sum of squares
+
+Numerical:  computer uses “random guesses” to find set of parameters to that minimises objective function, in this case residual sum of squares
+
+In this week's practical we will use Solver in Excel to numerically fit linear models.
 
 <!-- 
 ## Fitting the model {auto-animate="true"}
@@ -700,9 +709,6 @@ And then we can use `summary()` to get a summary of the model:
 summary(fit)
 ```
 
-## In the lab
-
-- You will attempt to fit a linear model to some real-world data using Excel, and compare your results to those obtained using R.
 
 ## Summary
 
